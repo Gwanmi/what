@@ -1,8 +1,15 @@
-# Mac에 Git 설치
+# Mac에 Git 설치 및 연동
 ## homebrew 설치 후 Git 설치(brew git install)
 ## git 코드 입력
 ### git config --global user.name " "
 ### git config --global user.email " "
+## 레파지토리가 있을 경우 로컬로 가져오기
+### git clone https://github.com/userid/name.git
+
+# Github에 대해서
+## Repository(저장소): 파일이나 디렉토리를 저장하는 장소
+### Local Repository(로컬 저장소): 현재 사용하고 있는 디바이스에 저장되는 것
+### Remote Repository(원격 저장소): 원격 서버에 저장되고 관리되는 저장소
 
 # IntelliJ Run 버튼 비활성화가 돼있을때
 ## 1. 오른쪽 상단 Add Configuration 클릭
