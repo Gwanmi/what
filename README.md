@@ -23,6 +23,18 @@ clone(클론): 원격 저장소의 내용을 새로운 폴더에 그대로 복�
 숨겨진 파일인 '.git' 삭제로 연동해제: find ./ -name ".git" | xargs rm -Rf
 로컬 저장소 삭제: rm -rf "로컬 저장소 명"
 ## 파일 상태 확인
+### git status 명령어로 파일 상태 확인 가능
+### git add filename 명령어로 git에게 추적해달라는 명령이 가능
+크게 Untracked, Tracked 상태로 나뉘는데 Untracked는 git이 추적하지 않는 상태(기본), Tracked는 git이 추적하는 상태를 말한다.
+Tracked는 크게 세 가지 상태로 나뉜다.
+Unmodified: Staging area에 있는 파일들을 커밋하면 바뀌는 상태
+Modified: Unmodified에 있는 파일을 수정하면 바뀌는 상태
+Staged: Staging area에 있는 파일들의 상태
+## 버전업
+git commit 명령어 입력 -> vim이 실행 되면 입력모드로 전환해서 버전업에 대한 메세지 입력 후 저장
+## 로그 확인
+git log 명령어로 누가 언제 commit을 했는지 조회 가능
+
 
 # vi 명령어
 ## 명령모드, 입력모드, 마지막형모드로 구성(첫 진입은 명령모드)
