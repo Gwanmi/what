@@ -26,14 +26,17 @@ clone(클론): 원격 저장소의 내용을 새로운 폴더에 그대로 복�
 ### git status 명령어로 파일 상태 확인 가능
 ### git add filename 명령어로 git에게 추적해달라는 명령이 가능
 크게 Untracked, Tracked 상태로 나뉘는데 Untracked는 git이 추적하지 않는 상태(기본), Tracked는 git이 추적하는 상태를 말한다.
-Tracked는 Staged area에 진입 후 크게 두 가지 상태로 나뉜다.
-Staged: add 후 staginf area에 있는 파일들의 기본 상태
+Tracked는 Staged area에 진입 후 크게 3가지 상태로 나뉜다.
+Staged: add 후 staged area에 있는 파일의 상태. git status를 하면 "Changes to be committed"에 들어있는 파일들이다.
 Unmodified: Staging area에 있는 파일들을 커밋하면 바뀌는 상태
 Modified: Unmodified에 있는 파일을 수정하면 바뀌는 상태
+*commit을 하기 위해선 add로 Staged 상태가 돼야한다.
+*add는 선택적 커밋이 가능하게 한다.
 ## 버전업
-git commit 명령어 입력 -> vim이 실행 되면 입력모드로 전환해서 버전업에 대한 메세지 입력 후 저장 혹은 git commit -m commit message로 commit 가능
+git commit 명령어 입력 -> vim이 실행 되면 입력모드로 전환해서 버전업에 대한 메세지 입력 후 저장 혹은 git commit -m commit message로 커밋 가능
 ## 로그 확인
-git log 명령어로 누가 언제 commit을 했는지 조회 가능
+git log 명령어로 누가 언제 커밋을 했는지 조회 가능
+git log -p를 사용하면 커밋과 커밋사이 소스의 차이를 알 수 있다.
 
 
 # vi 명령어
