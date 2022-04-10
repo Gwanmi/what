@@ -37,6 +37,12 @@ git commit 명령어 입력 -> vim이 실행 되면 입력모드로 전환해서
 ## 로그 확인
 git log 명령어로 누가 언제 커밋을 했는지 조회 가능
 git log -p를 사용하면 커밋과 커밋사이 소스의 차이를 알 수 있다.
+## 커밋 사이 차이점 확인
+git diff commitnumber commitnumber를 입력하면 해당 커밋끼리의 차이점을 출력해준다(commitnumber는 커밋의 고유번호)
+## 커밋을 취소하고 돌아감
+git reset commitnumber --hard 명령어로 해당 시점으로 되돌릴 수가 있다.(날려도 복구가능)
+git revert 명령어는 커밋을 취소하면서 새로운 버전을 생성함
+*협업에서는 함부로 쓰지말자
 
 
 # vi 명령어
