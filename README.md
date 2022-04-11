@@ -1,11 +1,11 @@
 # Mac에 Git 설치 및 연동
 ## 1. homebrew 설치 후 Git 설치
-- brew git install
+- `brew git install`
 ## 2. git 코드 입력
-- git config --global user.name "여기 유저이름"
-- git config --global user.email "여기 유저이메일"
+- `git config --global user.name "여기 유저이름"`
+- `git config --global user.email "여기 유저이메일"`
 ## *레파지토리가 있을 경우 로컬로 가져오기
-- git clone https://github.com/userid/name.git
+- `git clone https://github.com/userid/name.git`
 
 ---
 
@@ -21,13 +21,13 @@
 - fetch(페치): 원격 저장소에 있는 변경사항을 로컬 저장소로 가져오기만 함. 병합은 따로. 다른 사람이 수정한 부분을 확인하고 병합할 수 있다.
 - clone(클론): 원격 저장소의 내용을 새로운 폴더에 그대로 복사
 ## 저장소 생성
-- **git init**: 현재 디렉토리를 기준으로 저장소를 생성
+- `git init`: 현재 디렉토리를 기준으로 저장소를 생성
 ## 로컬 저장소 삭제
-- **find ./ -name ".git" | xargs rm -Rf**: 숨겨진 파일인 '.git' 삭제로 연동해제
-- **rm -rf 로컬 저장소 명**: 로컬 저장소 삭제
+- `find ./ -name ".git" | xargs rm -Rf`: 숨겨진 파일인 '.git' 삭제로 연동해제
+- `rm -rf 로컬 저장소 명`: 로컬 저장소 삭제
 ## 파일 상태 확인
-- **git status**: 파일 상태 확인 가능
-- **git add 파일이름**: git에게 추적해달라는 명령이 가능
+- `git status`: 파일 상태 확인 가능
+- `git add 파일이름`: git에게 추적해달라는 명령이 가능
 - 크게 Untracked, Tracked 상태로 나뉘는데 Untracked는 git이 추적하지 않는 상태(기본), Tracked는 git이 추적하는 상태를 말한다.
 - Tracked는 Staged area에 진입 후 크게 3가지 상태로 나뉜다.
   - Staged: add 후 staged area에 있는 파일의 상태. git status를 하면 "Changes to be committed"에 들어있는 파일들이다.
@@ -36,16 +36,16 @@
 - *commit을 하기 위해선 add로 Staged 상태가 돼야한다.
 - *add는 선택적 커밋이 가능하게 한다.
 ## 버전업
-- **git commit** 입력 -> vim이 실행 되면 입력모드로 전환해서 버전업에 대한 메세지 입력 후 저장
-- 또는 **git commit -m 커밋메세지**로 커밋 가능
+- `git commit` 입력 -> vim이 실행 되면 입력모드로 전환해서 버전업에 대한 메세지 입력 후 저장
+- 또는 `git commit -m 커밋메세지`로 커밋 가능
 ## 로그 확인
-- **git log**: 누가 언제 커밋을 했는지 조회 가능
-- **git log -p**: 커밋과 커밋사이 소스의 차이를 알 수 있다.
+- `git log`: 누가 언제 커밋을 했는지 조회 가능
+- `git log -p`: 커밋과 커밋사이 소스의 차이를 알 수 있다.
 ## 커밋 사이 차이점 확인
-- **git diff 커밋고유번호 커밋고유번호**: 해당 커밋간의 차이점을 출력해준다.
+- `git diff 커밋고유번호 커밋고유번호`: 해당 커밋간의 차이점을 출력해준다.
 ## 커밋을 취소하고 돌아감
-- **git reset commitnumber --hard**: 해당 시점으로 되돌릴 수가 있다.(날려도 복구가능)
-- **git revert** 커밋을 취소하면서 새로운 버전을 생성함
+- `git reset commitnumber --hard`: 해당 시점으로 되돌릴 수가 있다.(날려도 복구가능)
+- `git revert`: 커밋을 취소하면서 새로운 버전을 생성함
 - *협업에서는 함부로 쓰지말자
 
 ---
@@ -68,11 +68,11 @@ i, a를 누르면 입력모드로 진입, ESC를 누르면 명령모드 진입, 
 ---
 
 # IntelliJ Run 버튼 비활성화가 돼있을때
-- 1. 오른쪽 상단 Add Configuration 클릭
-- 2. '+' 클릭 후 Application를 선택하고 OK로 생성
-- 3. Main Class에 메인이 될 클래스 입력 후 추가
+1. 오른쪽 상단 Add Configuration 클릭
+2. '+' 클릭 후 Application를 선택하고 OK로 생성
+3. Main Class에 메인이 될 클래스 입력 후 추가
 
 # IntelliJ 에러
-- Class JavaLaunchHelper is implemented in both ... 
+## Class JavaLaunchHelper is implemented in both ... 
 - 맥 사용자가 IDE로 App 실행시 일어나는 오래된 자바 버그로 무시해도 안전한 메세지
 - Preferences > Edit > General > Console > Fold console lines that contain에 "Class JavaLaunchHelper is implemented in both" 추가
